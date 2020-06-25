@@ -1,0 +1,9 @@
+<h1>Apartment List</h1>
+
+<% @apartments.each do | apartments | %>
+    <li>
+    <a href= "/apartment/<%= apartments.id %>">
+    <%= apartments.address %> 
+    </a>
+    </li>
+<% end %>

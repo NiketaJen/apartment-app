@@ -1,0 +1,13 @@
+<h1>Tenant List</h1>
+
+<% @tenants.each do | tenants | %>
+    <li>
+    <a href= "/update/<%= tenants.id %>">
+    <%= tenants.name %> 
+    </a>
+    </li>
+<% end %>
+
+
+
+

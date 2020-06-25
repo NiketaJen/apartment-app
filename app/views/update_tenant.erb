@@ -1,0 +1,22 @@
+  
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="UTF-8">
+  <title>Update Tenant Info</title>
+ </head>
+ <body>
+ <h1>Tenant Management</h1>
+   <form method="PATCH" action="/update/:id">
+     <label>Change Tenant Name: <input type="text" name="name" /></label><br/>
+     <label>Change Apartment: <input type="text" name="apartment_id" /></label><br/>
+     <input type="submit" id="Submit" />
+   </form>
+
+   <form method="post" action="/remove-tenant/<%= @tenant.id %>">
+    <input type="hidden" name="_method" value="delete">
+    <input type="submit" value="Remove Tenant" >
+  </form>
+
+ </body>
+</html>

@@ -1,0 +1,23 @@
+<h1>Create a Tenant</h1>
+
+
+<form method="POST" action="/make-a-tenant" >
+    <div>
+        <label>Tenant</label>
+        <input name="tenant_name" type="text" />
+    </div>
+
+    <div>
+        <label>Apartment ID</label>
+        <select name="tenant_apt_id">
+            <% Apartment.all.each do | apartment | %>
+                <option value="<%= apartment.id %>"><%= apartment.address %></option>
+            <% end %>
+        </select>
+    </div>
+ 
+    <input type="submit">
+</form>
+
+
+
